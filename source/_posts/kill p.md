@@ -1,5 +1,5 @@
 ---
-title: Erlang mix笔记
+title: windows下杀死进程
 date: 2023-11-21 20:18:51
 tags:
 - erlang
@@ -9,7 +9,7 @@ categories:
 
 # 概述
 
-整理一些erlang杂项
+## windows下杀死进程
 
 <!--more-->
 
@@ -20,9 +20,7 @@ categories:
 
 taskkill /f /t /im “15904”
 or
-taskkill /f /t /im “java.exe”
-
-复制 taskkill /F /IM node.exe，粘贴运行；
+taskkill /F /IM node.exe
 
 
 
