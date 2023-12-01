@@ -257,6 +257,18 @@ UI框架    20160419
 service层负责处理网络相关的内容 分发事件
 
 
+CharacterManager 
+PlayerInputController SendEntityEvent 给 EntityController
+EntityController 只受数据驱动 控制动画
+
+GameObjectManager 初始化 CharacterManager里面的实体
+character.IsCurrentPlayer 如果是自己才给
+MainPlayerCamera.Instance.player
+Character
+entityController
+这三个地方赋值
+
+
 
 
 
