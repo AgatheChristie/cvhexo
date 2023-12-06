@@ -1,5 +1,5 @@
 ---
-title: 个人学习笔记
+title: erlang mix
 date: 2023-11-21 20:18:51
 tags:
 - erlang
@@ -8,20 +8,43 @@ categories:
 ---
 
 # 概述
-个人学习笔记
+erlang杂项
 
-## windows下杀死进程
+## erlang杂项
 
 <!--more-->
 
 
-使用命令 netstat -ano |findstr “8082”
+### UTF编码问题
+```shell
+%% 这样不会报错
+Msg = utils:format(<<("<font color='#36d626'>看了看开服时间你好你好")/utf8>>).
 
-查询当前端口PID为15904的进程 tasklist | findstr 15904
+%% 但是这样就会报错
 
-taskkill /f /t /im “15904”
-or
-taskkill /F /IM node.exe
+Msg = "<font color='#36d626'>看了看开服时间你好你好".
+
+<<Msg/utf8>>.  %%这里直接报错了
+```
+
+很奇怪的原因
+
+### --运算符
+```shell
+> [1,2,3,2] --[2] --[2].
+[1,2,3,2]
+> [1,2,3,2]--[2] .
+[1,3,2]
+```
+--符号的运算顺序是从右到左可以分两步执行或者用括号括起来([1,2,3,2] --[2]) --[2].
+
+### ++运算符
+```shell
+lists:append()
+M++N会遍历列表M所以如果必须要使用++也要让数据量小的List在前面
+```
+
+
 
 
 
