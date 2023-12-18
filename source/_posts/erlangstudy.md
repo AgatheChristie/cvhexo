@@ -57,6 +57,36 @@ lager(依赖goldrush)
 msgpack
 
 
+## C1
+
+
+### ETS_GOODS_ONLINE 不是配置表
+
+玩家进入游戏
+
+**mod_player**这条进程
+init时会拉起mod_goods进程
+
+**mod_goods** 进程init时
+init_goods(PlayerId)
+
+
+### ETS_BASE_SHOP  ETS_BASE_GOODS 是配置表
+
+**mod_kernel**这条进程
+init时会把所有配置表从DB导入到ETS
+为什么要存在数据库里面？然后还导到ETS？
+为什么不直接用配置表呢？
+猜测是为了用ETS里面的一些匹配方法，比如ets:match_object(Tab, Pattern),
+如果是配置表就要自己写筛选方法了，但是不占用DB和ETS内测呀！！！
+
+### 背包系统 增加道具  扣除道具  
+
+mod_goods进程state
+
+null_cells = [1,4,6,22,31] %% 空位
+
+
 
 
 
