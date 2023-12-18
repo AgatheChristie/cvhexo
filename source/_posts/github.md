@@ -13,31 +13,44 @@ categories:
 
 <!--more-->
 
-## 设置Git代理
-
+## 设置Git代理 http or socks5
+```shell
 git config --global http.proxy 'http://127.0.0.1:15235'
 git config --global https.proxy 'http://127.0.0.1:15235'
-# 全局
+```
+### 全局
+```shell
 git config --global http.proxy 'socks5://127.0.0.1:15235'
 git config --global https.proxy 'socks5://127.0.0.1:15235'
-
-# 本地
+```
+### 本地
+```shell
 git config --local http.proxy '127.0.0.1:15235'
 git config --local https.proxy '127.0.0.1:15235'
-
+```
 
 ## 取消Git代理
-
+### 全局
+```shell
 git config --global --unset http.proxy
 git config --global --unset https.proxy
-
-
+```
+### 本地
+```shell
 git config --local --unset http.proxy
 git config --local --unset https.proxy
-
+```
 ## 查看Git代理
+### 全局
+```shell
 git config --global http.proxy
 git config --global https.proxy
+```
+### 全局
+```shell
+git config --local http.proxy
+git config --local https.proxy
+```
 
 
 
