@@ -121,7 +121,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  Links: /Links/ || fa fa-heartbeat
+  #Links: /Links/ || fa fa-heartbeat
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -199,10 +199,11 @@ links_settings:
   icon: fa fa-link
   title: Links
   # Available values: block | inline
-  layout: block
+  layout: inline
 
 links:
-  #Title: http://yoursite.com
+  Alex: https://alex-mcavoy.github.io/
+  在路上: https://feng19.com/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
