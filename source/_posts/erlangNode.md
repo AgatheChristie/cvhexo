@@ -22,17 +22,26 @@ werl -name 'fries@127.0.0.1'
 werl -name fries@127.0.0.1
 
 werl -name ketchup@127.0.0.1
+
+erlang:send(Dest, Msg) -> Msg
+This is the same as using the send operator: Dest ! Msg.
+
 ```
 ### 不连接 直接给在本地注册名字的节点发消息
 此时两个节点的cookie是一样的
 ```
 erlang:get_cookie().
-register(uzi,self()).
+erlang:register(uzi,self()).
+global:register_name(uzi, self()).
 fries 下执行
 {uzi,'fries@127.0.0.1'} ! {hellocc,fromqqq,self()}.
 ```
-可以收到消息
-
+1.可以用一个一模一样的名字在本地和全局同时注册
+2.!操作符传注册名的话只能收到本地注册名的消息
+3.上面可以收到消息是因为在本地注册了uzi erlang:register(uzi,self())
+4.如果 不在本地注册uzi只全局注册global:register_name(uzi, self()).
+这样在K节点向F节点发送消息F节点是收不到的,如果只想向一个全局注册的名字进程发送消息需要
+取到pid比如global:whereis_name(uzi) ! {hellocc,fromqqq,self()}.
 
 ![img_3.png](/pic/erlangNode/img_3.png)
 
