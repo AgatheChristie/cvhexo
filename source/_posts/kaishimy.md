@@ -16,6 +16,14 @@ categories:
 ## hexo 相关
 
 
+### 常用命令
+```bash
+hexo clean   清理
+hexo s -g    编译生成 然后本地预览
+hexo d -g    编译生成 然后发布到github
+```
+
+
 ### 比较好的例子
 [Alex_McAvoy大佬的博客](https://alex-mcavoy.github.io/)
 
