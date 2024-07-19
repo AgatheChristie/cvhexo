@@ -5,8 +5,6 @@ tags:
 - github
 categories:
 - Github
-password: 
-- ccc
 ---
 
 # 概述

@@ -1,5 +1,5 @@
 ---
-title: Erlang实现A星草稿
+title: 一些草稿
 date: 2024-03-24 22:21:13
 tags:
 - erlang
@@ -11,13 +11,13 @@ password:
 
 # 概述
 
-Erlang实现A星草稿
+一些草稿
 
 <!--more-->
 
 
 ## 需求
-    Erlang实现A星草稿
+    一些草稿
 
 
 
